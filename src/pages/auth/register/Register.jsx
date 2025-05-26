@@ -20,6 +20,9 @@ const Register = () => {
             
         }
 
+        console.log(email);
+        
+
 
 
 
