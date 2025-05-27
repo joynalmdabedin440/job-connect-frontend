@@ -32,7 +32,7 @@ const Navbar = () => {
             </div>
             <div className="navbar-end">
                 <Link to="/register" className='border-b-2 border-purple-900'>Register</Link>
-                <a className="btn btn-primary ml-2">Sign In</a>
+                <Link to="/signIn" className="btn btn-primary ml-2">Sign In</Link>
             </div>
         </div>
     );

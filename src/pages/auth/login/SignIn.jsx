@@ -1,15 +1,14 @@
+import React, { useContext } from 'react';
+import lottieSignIn from "../../../assets/lottie/lottieSignIn.json"
 import Lottie from 'lottie-react';
-
-import lottieAnimation from "../../../assets/lottie/register.json"
-import { useContext } from 'react';
-import AuthContext from '../../../context/AuthContext/AuthContext';
 import { Link } from 'react-router';
+import AuthContext from '../../../context/AuthContext/AuthContext';
 
-const Register = () => {
+const SignIn = () => {
 
-    const {createUserWithEmail}= useContext(AuthContext)
+    const {signInWithEmail} = useContext(AuthContext)
 
-    const handleRegister = (e) => {
+    const handleSignIn = (e) => {
         e.preventDefault();
 
         const form = e.target;
@@ -22,41 +21,41 @@ const Register = () => {
 
 
             return
-            
+
         }
 
-
-        createUserWithEmail(email, password)
-            .then(res => {
-            console.log(res);
+        signInWithEmail(email, password)
+            .then(user => {
+            console.log(user);
             
             })
             .catch(error => {
             console.log(error.message);
             
-            })
+        })
+
         
+        
+
         form.reset()
-
-
-        
     }
+
 
     return (
         <div className="hero bg-base-200 min-h-screen">
             <div className="hero-content flex-col lg:flex-row-reverse">
                 <div className="text-center lg:text-left  w-96">
-                    <Lottie animationData={lottieAnimation}></Lottie>
+                    <Lottie animationData={lottieSignIn}></Lottie>
                 </div>
                 <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
                     <div className="card-body">
-                        <form onSubmit={handleRegister} className="fieldset">
+                        <form onSubmit={handleSignIn} className="fieldset">
                             <label className="label">Email</label>
                             <input type="email" name="email" className="input" placeholder="Email" />
                             <label className="label">Password</label>
                             <input type="password" name="password" className="input" placeholder="Password" />
-                            <div><Link to="/signIn" className="link link-hover">Already have an account?</Link></div>
-                            <button type="submit" className="btn btn-neutral mt-4">Register Now</button>
+                            <div><Link to="/register" className="link link-hover">Don't have any account?</Link></div>
+                            <button type="submit" className="btn btn-neutral mt-4">Sign In</button>
                         </form>
                     </div>
                 </div>
@@ -65,5 +64,4 @@ const Register = () => {
     );
 };
 
-export default Register;
-
+export default SignIn;
