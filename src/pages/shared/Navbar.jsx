@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router';
+import AuthContext from '../../context/AuthContext/AuthContext';
 
 const Navbar = () => {
+
+    const { user } = useContext(AuthContext)
 
 
     const links = <>
@@ -31,8 +34,17 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <Link to="/register" className='border-b-2 border-purple-900'>Register</Link>
-                <Link to="/signIn" className="btn btn-primary ml-2">Sign In</Link>
+
+                {
+                    user ?
+                        <Link to="/signIn" className="btn btn-primary ml-2">Sign Out</Link>
+                        :
+                        <>
+                            <Link to="/register" className='border-b-2 border-purple-900'>Register</Link>
+                            <Link to="/signIn" className="btn btn-primary ml-2">Sign In</Link>
+                        </>
+                }
+
             </div>
         </div>
     );

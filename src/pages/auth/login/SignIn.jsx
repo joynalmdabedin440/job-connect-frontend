@@ -26,7 +26,7 @@ const SignIn = () => {
 
         signInWithEmail(email, password)
             .then(user => {
-            console.log(user);
+            console.log(user.user);
             
             })
             .catch(error => {
