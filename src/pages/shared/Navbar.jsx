@@ -1,6 +1,8 @@
 import React, { useContext } from 'react';
-import { Link } from 'react-router';
+import { Link, NavLink } from 'react-router';
 import AuthContext from '../../context/AuthContext/AuthContext';
+
+import jobIcon from "../../assets/logo/favicon.png"
 
 const Navbar = () => {
 
@@ -18,9 +20,10 @@ const Navbar = () => {
 
 
     const links = <>
-        <li><a>Item 1</a></li>
-        <li><a>Item 2</a></li>
-        <li><a>Item 3</a></li>
+        <li><NavLink to='/'>Home</NavLink></li>
+        <li><NavLink to='/'>Home</NavLink></li>
+        <li><NavLink to='/'>Home</NavLink></li>
+        
     </>
     return (
         <div className="navbar bg-base-100 shadow-sm">
@@ -35,7 +38,11 @@ const Navbar = () => {
                         {links}
                     </ul>
                 </div>
-                <Link to="/" className="btn btn-ghost text-xl">daisyUI</Link>
+                <Link to="/" className="btn btn-ghost text-xl ">
+                    <img src={jobIcon} alt="Icon" />
+
+                    <h2>JobConnect</h2>
+                </Link>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
