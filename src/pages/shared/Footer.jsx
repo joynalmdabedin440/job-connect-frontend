@@ -8,9 +8,9 @@ const Footer = () => {
                      <img src="job-portal-logo.png" alt="logo" />
                </div>
                 <p>
-                    ACME Industries Ltd.
+                    JobConnect App
                     <br />
-                    Providing reliable tech since 1992
+                    Providing reliable Job since 2025
                 </p>
             </aside>
             <nav>
