@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { easeInOut, motion } from 'motion/react'
+import { easeInOut,motion } from 'motion/react'
 import team1 from "../../assets/team/team1.jpg"
 import team2 from "../../assets/team/team2.jpg"
 const Bannar = () => {
