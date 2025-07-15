@@ -7,6 +7,7 @@ import Home from "../pages/home/Home";
 import { Component } from "react";
 import Register from "../pages/auth/register/Register";
 import SignIn from "../pages/auth/login/SignIn";
+import JobDetails from "../pages/JobDetails";
 const router = createBrowserRouter([
     {
         path: "/",
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
             {
                 path: "signIn",
                 Component: SignIn
+            },
+            {
+                path: "jobs/:id",
+                Component: JobDetails
             }
         ]
     }
