@@ -1,11 +1,11 @@
 import React from 'react';
-
+import logo from "../../assets/logo/job-portal-logo.png"
 const Footer = () => {
     return (
         <footer className="footer sm:footer-horizontal bg-base-200 text-base-content p-10">
             <aside>
                 <div>
-                     <img src="job-portal-logo.png" alt="logo" />
+                     <img src={logo} alt="logo" />
                </div>
                 <p>
                     JobConnect App
