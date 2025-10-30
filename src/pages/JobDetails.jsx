@@ -14,16 +14,8 @@ const JobDetails = () => {
 
     }, [id])
 
-    console.log(job,id);
-    
-
-
-
-
-
-
     return (
-        <div className="max-w-3xl mx-auto bg-white shadow-md rounded-xl p-8 my-8 border border-gray-200">
+        <div className="max-w-3xl mx-auto bg-white shadow-md rounded-xl p-8 my-8 border border-gray-200 ">
             {/* Header Section */}
             <div className="flex items-center gap-4 mb-6">
                 <img
@@ -85,6 +77,8 @@ const JobDetails = () => {
                 <p><strong>Name:</strong> {job?.hr_name}</p>
                 <p><strong>Email:</strong> <a href={`mailto:${job?.hr_email}`} className="text-blue-600 hover:underline">{job?.hr_email}</a></p>
             </div>
+
+            <button className='bg-blue-600 text-white mt-2 px-4 py-2 rounded-md hover:bg-blue-700'>Apply Now</button>
         </div>
         
     );

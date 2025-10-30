@@ -67,7 +67,7 @@ const JobCard = ({ job }) => {
           to={`/jobs/${job._id}`}
           className="bg-blue-100 text-blue-700 text-sm font-medium px-4 py-2 rounded-lg hover:bg-blue-200 transition"
         >
-          Apply Now
+          View Details
         </Link>
       </div>
     </div>
