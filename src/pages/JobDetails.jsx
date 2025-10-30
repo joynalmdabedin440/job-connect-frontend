@@ -1,6 +1,6 @@
 
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router';
+import { Link, useParams } from 'react-router';
 
 const JobDetails = () => {
 
@@ -78,7 +78,12 @@ const JobDetails = () => {
                 <p><strong>Email:</strong> <a href={`mailto:${job?.hr_email}`} className="text-blue-600 hover:underline">{job?.hr_email}</a></p>
             </div>
 
-            <button className='bg-blue-600 text-white mt-2 px-4 py-2 rounded-md hover:bg-blue-700'>Apply Now</button>
+            <Link to={`/apply/${job?._id}`} >
+                <button className='bg-blue-600 text-white mt-2 px-4 py-2 rounded-md hover:bg-blue-700'>Apply Now</button>
+            
+            </Link>
+
+            
         </div>
         
     );

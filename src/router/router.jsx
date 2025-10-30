@@ -8,6 +8,8 @@ import { Component } from "react";
 import Register from "../pages/auth/register/Register";
 import SignIn from "../pages/auth/login/SignIn";
 import JobDetails from "../pages/JobDetails";
+import PrivateRoute from "../routes/PrivateRoute";
+import JobApply from "../pages/JobApply/JobApply";
 const router = createBrowserRouter([
     {
         path: "/",
@@ -28,7 +30,13 @@ const router = createBrowserRouter([
             {
                 path: "jobs/:id",
                 Component: JobDetails
+            },
+            {
+                path: "apply/:id",
+                element: <PrivateRoute><JobApply /></PrivateRoute>
+            
             }
+
         ]
     }
 ])
