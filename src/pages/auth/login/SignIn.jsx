@@ -29,6 +29,7 @@ const SignIn = () => {
 
         signInWithEmail(email, password)
             .then(user => {
+            console.log(user);
             navigate(from)
             
             })
