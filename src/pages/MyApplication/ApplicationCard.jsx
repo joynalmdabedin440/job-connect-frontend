@@ -4,10 +4,7 @@ import { toast } from "react-hot-toast"; // optional for nice alerts
 import { Link } from "react-router";
 
 
-
-const ApplicationCard = ({ application, onDelete }) => {
-
-    
+const ApplicationCard = ({ application, onDelete }) => { 
 
     // Handle Delete
     const handleDelete = async () => {
