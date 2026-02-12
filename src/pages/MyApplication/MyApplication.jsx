@@ -21,6 +21,7 @@ const MyApplication = () => {
   setApplications((prev) => prev.filter((app) => app._id !== id));
 };
 
+    
     return (
         <div>
             <h2 className="text-2xl font-bold mb-4">My Applications</h2>
